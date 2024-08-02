@@ -1,0 +1,157 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.container{
+  width:"100%";
+  padding: 0 !important;
+}
+
+.react-datepicker-wrapper{
+  width: -webkit-fill-available !important;
+}
+
+.react-datepicker__input-container{
+  width: -webkit-fill-available !important;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+/* nav bar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 20px;
+  background-color:#1F2937;
+  color: #fff;
+}
+
+.navbar-logo {
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.navbar-search{
+  background: #fff;
+    border-radius: 20px;
+}
+
+.navbar-search input {
+  padding: 5px;
+  border-radius: 20px;
+  border: 0;
+}
+.searchIcon{
+  color:#ccc;
+  background-color:  #fff;
+    border-radius: 20px;
+    margin-left: 10px;
+}
+
+.searchInput {
+  color: #333;
+}
+.searchInput:focus-visible {
+  outline: none;
+}
+
+/* rocket Item */
+.rocket-item {
+  background-color: #fff; /* Background color of the card */
+  border: 1px solid #ddd; /* Border around the card */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for a raised effect */
+  padding: 16px; /* Padding inside the card */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center content horizontally */
+  text-align: center; /* Center text */
+  transition: transform 0.2s; /* Animation for hover effect */
+}
+
+.rocket-item:hover {
+  transform: translateY(-5px); /* Slight lift effect on hover */
+}
+
+.rocket-item h3 {
+  margin: 16px 0 8px; /* Space above and below the title */
+  font-size: 1.5rem; /* Font size for the title */
+  color: #333; /* Text color */
+}
+
+.rocket-item p {
+  margin: 0; /* No margin for the paragraph */
+  color: #666; /* Text color */
+}
+
+
+
+/* rocket List */
+.rocket-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 16px; /* Adjust the gap between cards as needed */
+  padding: 10px 20px;
+}
+
+@media (min-width: 1200px) {
+  .rocket-list {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (min-width: 900px) and (max-width: 1199px) {
+  .rocket-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 600px) and (max-width: 899px) {
+  .rocket-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 599px) {
+  .rocket-list {
+    grid-template-columns: 1fr;
+  }
+}
