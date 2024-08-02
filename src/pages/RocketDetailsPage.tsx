@@ -25,7 +25,9 @@ import SkeletonLoader from "@/components/SkeletonLoader";
 
 const RocketDetailsPage: React.FC = () => {
   const { id } = useParams<{ id: string }>();
+
   const navigate = useNavigate();
+
   const { data, isLoading, error } = useQuery({
     queryKey: ["rocket", id],
     queryFn: () => fetchRocketDetails(id!),

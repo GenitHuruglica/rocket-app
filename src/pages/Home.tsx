@@ -5,6 +5,7 @@ import NavBar from "@/components/NavBar";
 import { useQuery } from "@tanstack/react-query";
 import { fetchRockets } from "../utils/api";
 import { Rocket } from "@/components/RocketItem";
+import SkeletonLoader from "@/components/SkeletonLoader";
 
 const Home: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState("");
@@ -26,8 +27,8 @@ const Home: React.FC = () => {
 
   const handleModal = () => setIsOpen(!isOpen);
 
-  if (isLoading) return <div>Loading...</div>;
-  if (error) return <div>Error fetching rockets</div>;
+  if (isLoading) return <SkeletonLoader />;
+  if (error) return <div className="mb-5">Error fetching rocket details</div>;
 
   const filteredRockets = rockets?.filter((rocket: Rocket) =>
     rocket.name.toLowerCase().includes(searchTerm.toLowerCase())

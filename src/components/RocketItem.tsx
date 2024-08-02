@@ -16,10 +16,9 @@ interface RocketItemProps {
 }
 
 export interface Rocket {
-  id?: string;
+  id: string;
   name: string;
   first_flight: Date;
-  height?: number;
 }
 
 const RocketItem: React.FC<RocketItemProps> = ({ rocket }) => {
